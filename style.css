@@ -1,0 +1,170 @@
+:root {
+    --mobile_Width: 375px;
+    --desktop_Width: 1440px;
+
+    --white: hsl(0, 0%, 100%);
+
+    --stone_100: hsl(30, 54%, 90%);
+    --stone_150: hsl(30, 18%, 87%);
+    --stone_600: hsl(30, 10%, 34%);
+    --stone_900: hsl(24, 5%, 18%);
+
+    --brown_800: hsl(14, 45%, 36%);
+
+    --rose_800: hsl(332, 51%, 32%);
+    --rose_50: hsl(330, 100%, 98%);
+
+    --font_16: 16px;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'BoldOutfit';
+    src: url("/assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'MySerif';
+    src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Outfit;
+    color: var(--stone_600);
+    background-color: var(--stone_100);
+}
+
+h1 {
+    color: var(--stone_900);
+    line-height: 2rem;
+}
+
+h1, h2 {
+    font-family: MySerif;
+}
+
+h2 {
+    color: var(--brown_800)
+}
+
+h3 {
+    font-family: BoldOutfit;
+    color: var(--rose_800)
+}
+
+b {
+    font-family: BoldOutfit;
+}
+
+h2, h3 {
+    margin-bottom: 1rem;
+}
+
+.HorizontalLine {
+    width: 100%;
+    height: 1px;
+    background-color: var(--stone_150);
+}
+
+.RecipeCard {
+    background-color: var(--white);
+}
+
+.RecipeCardImage {
+    width: 100%;
+}
+
+.RecipeCardContent {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .RecipeCard {
+        margin: 100px 0;
+        padding: 2rem;
+        width: 640px;
+        border-radius: 1rem;
+    }
+
+    .RecipeCardImage {
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .RecipeCardContent {
+        margin: 0;
+    }
+}
+
+.DescriptionBlock {
+    background-color: var(--rose_50);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+ul, ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 1rem;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    padding-left: 1rem;
+}
+
+.DescriptionBlock > ul li::marker {
+    font-size: 0.7em;
+    color: var(--rose_800)
+}
+
+ul li::marker {
+    font-size: 0.7em;
+    color: var(--brown_800)
+}
+
+ol li::marker {
+    font-size: 1rem;
+    font-family: BoldOutfit;
+    color: var(--brown_800)
+}
+
+.NutritionTable {
+    margin-top: 1rem;
+}
+
+.NutritionTableRow {
+    padding: 8px 0 8px 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--stone_150);
+}
+
+.NutritionTableRowValue {
+    font-family: BoldOutfit;
+    color: var(--brown_800)
+}
+
+.NutritionTableRow:last-child {
+    border-bottom: 0;
+}

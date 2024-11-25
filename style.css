@@ -19,18 +19,18 @@
 
 @font-face {
     font-family: 'Outfit';
-    src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'BoldOutfit';
-    src: url("/assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+    src: url("./assets/fonts/outfit/static/Outfit-SemiBold.ttf");
 }
 
 @font-face {
     font-family: 'MySerif';
-    src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf')
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf')
 }
 
 * {
